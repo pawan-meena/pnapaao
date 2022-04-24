@@ -23,3 +23,8 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     padding-top: 0;
 }
 
+  @media (max-width:1199.98px){
+    .mb-bg{
+      z-index: -1;
+    }
+  }
