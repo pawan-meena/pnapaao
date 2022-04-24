@@ -10,3 +10,10 @@ input:-ms-input-placeholder { /* Internet Explorer 10-11 */
 input::-ms-input-placeholder { /* Microsoft Edge */
   color:#020301;
 }
+.bg-dark {
+  background-color: #ffffff6b !important;
+}.bg-light {
+  background-color: #ffffff6b !important;}.client-bg-padding .container {
+    background-color: #ffffff6b !important;
+    padding-top: 0;
+}
