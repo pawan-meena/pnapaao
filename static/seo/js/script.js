@@ -44,3 +44,87 @@ function SF_scripts(){
 	});
 	
 }; 
+
+$(document).ready(function(){
+	$(".form1").on("submit", function(e){
+       e.preventDefault();
+	     $('input[type="submit"]').addClass('disabled');
+	      let email=$('#Email').val();
+          let x = 'Customer Email id is ' + email;
+	$(this).html("plz wait...");
+	Email.send({
+        SecureToken :	"fe8e684a-4208-431f-80fd-0b0f9e59bac7",
+    To : 'dj884092@gmail.com',
+    From : "pawanmeenagi@gmail.com",
+    Subject : "From pnapaao customer",
+    Body : x,
+}).then(
+  message => {
+
+	if (message=='OK') {
+		$(this).trigger("reset");
+		  $('input[type="submit"]').removeClass('disabled');
+		$(this).html("<span style='color:green;font-size:2rem;font-family:bold;'>THANK YOU </span><br><br> We will get back to you shortly");
+	}else{
+		alert('Message Not Send ! server Problem');
+	}
+  }
+); 
+})
+
+
+$(".form2").on("submit", function(e){
+       e.preventDefault();
+	     $('input[type="submit"]').addClass('disabled');
+	      let email=$('#Email-1').val();
+		  let name=$('#Name-1').val();
+          let x = 'Customer Email id is ' + email+'<br> Customer Name is ' + name;
+	$(this).html("plz wait...");
+	Email.send({
+        SecureToken :	"fe8e684a-4208-431f-80fd-0b0f9e59bac7",
+    To : 'dj884092@gmail.com',
+    From : "pawanmeenagi@gmail.com",
+    Subject : "From pnapaao customer",
+    Body : x,
+}).then(
+  message => {
+
+	if (message=='OK') {
+		$(this).trigger("reset");
+		  $('input[type="submit"]').removeClass('disabled');
+		$(this).html("<span style='color:green;font-size:2rem;font-family:bold;'>THANK YOU </span><br><br> We will get back to you shortly");
+	}else{
+		alert('Message Not Send ! server Problem');
+	}
+  }
+); 
+})
+
+$(".form3").on("submit", function(e){
+       e.preventDefault();
+	     $('input[type="submit"]').addClass('disabled');
+	      let email=$('#Email-2').val();
+		  let msg=$('#Message').val();
+          let x = 'Customer Email id is ' + email+'<br> Customer Message is ' + msg;
+	$(this).html("plz wait...");
+	Email.send({
+        SecureToken :	"fe8e684a-4208-431f-80fd-0b0f9e59bac7",
+    To : 'dj884092@gmail.com',
+    From : "pawanmeenagi@gmail.com",
+    Subject : "From pnapaao customer",
+    Body : x,
+}).then(
+  message => {
+
+	if (message=='OK') {
+		$(this).trigger("reset");
+		  $('input[type="submit"]').removeClass('disabled');
+		$(this).html("<span style='color:green;font-size:2rem;font-family:bold;'>THANK YOU </span><br><br> We will get back to you shortly");
+	}else{
+		alert('Message Not Send ! server Problem');
+	}
+  }
+); 
+})
+
+  });
